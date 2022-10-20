@@ -6,9 +6,12 @@ const graphqlHTTP = require('express-graphql').graphqlHTTP;
 const schema = require('./schema/schema')
  
 const mongoose = require('mongoose');
+
+//require('dotenv/config');
+require('dotenv').config({path:'.env'})
  
 //Connect to MongoDB
-mongoose.connect('mongodb+srv://archit:asdf1234$$@cluster0.zjs4ihd.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGO_URL)
  
 mongoose.connection.once('open', () => {
  

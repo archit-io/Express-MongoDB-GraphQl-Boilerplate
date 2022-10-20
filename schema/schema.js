@@ -142,5 +142,5 @@ const Mutation = new GraphQLObjectType({
 //we will allow users to use when they are making requests.
 module.exports = new GraphQLSchema({
    query: RootQuery,
-   Mutation: Mutation
+   mutation: Mutation
 });
